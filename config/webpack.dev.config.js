@@ -16,12 +16,6 @@ module.exports = merge(common, {
     compress: true,
     hot: true,
     inline: true,
-    setupMiddlewares: function (app) {   
-      app.get('/api/users', (req, res, next) => {   
-          let users = [{ name: 'John' }, { name: 'Jane' }, { name: 'Bob' }]   
-          res.send(users)   
-      })   
-  }   
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
 });
